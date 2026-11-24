@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Today · Data Tracker</title>
+<meta name="description" content="Latest prices for 30 coins and what moved since the previous daily run.">
+<meta name="theme-color" content="#124a30">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>try{if(sessionStorage.getItem("jw.frost"))document.documentElement.classList.add("frosted")}catch(e){}</script>
+</head>
+<body>
+<main>
+  <h1 data-sleigh>Today at the Coin Workshop</h1>
+  <p class="sub" id="last-run">Loading…</p>
+  <div class="stats" id="stats"></div>
+  <div class="cols">
+    <section class="card"><h2>🎁 Biggest moves</h2><p class="muted">Price change from each item's previous run to its latest run; the ten largest, up or down.</p><ul class="plain" id="moves"></ul></section>
+    <section class="card"><h2>🧝 Sources — the elves on duty</h2><table><thead><tr><th>Source</th><th>Status</th><th class="num">Items</th></tr></thead><tbody id="sources"></tbody></table></section>
+  </div>
+  <section class="card"><h2>🪙 Latest values</h2>
+    <p class="muted">“Since last run” compares the latest price with the item's previous run; “24h” is the change the source reports.</p>
+    <div class="scroll"><table><thead><tr><th>Item</th><th>Source</th><th class="num">Price</th><th class="num">Since last run</th><th class="num">24h</th></tr></thead><tbody id="latest"></tbody></table></div></section>
+</main>
+<script src="app.js"></script>
+<script src="today.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>
