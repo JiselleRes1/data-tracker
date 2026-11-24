@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Browse · Data Tracker</title>
+<meta name="description" content="Search, filter and sort the latest values; star the coins you want to keep.">
+<meta name="theme-color" content="#124a30">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>try{if(sessionStorage.getItem("jw.frost"))document.documentElement.classList.add("frosted")}catch(e){}</script>
+</head>
+<body>
+<main>
+  <h1 data-sleigh>Browse the Wish List</h1>
+  <p class="sub" id="summary">Loading…</p>
+  <div class="controls">
+    <label>Search names<input id="q" type="search" placeholder="e.g. bitcoin or SOL"></label>
+    <label>Source<select id="source"><option value="">All sources</option></select></label>
+    <label>Size (rank)<select id="tier"><option value="">Any</option><option value="1-10">Top 10</option><option value="11-25">11 – 25</option><option value="26+">26 and below</option></select></label>
+    <label>Direction since last run<select id="dir"><option value="">Any</option><option value="up">Up</option><option value="down">Down</option></select></label>
+    <label>Sort by<select id="sort">
+      <option value="rank">Rank</option><option value="price_usd">Price</option><option value="market_cap_usd">Market cap</option>
+      <option value="volume_24h_usd">24h volume</option><option value="change_24h_pct">24h change</option><option value="pct">Since last run</option></select></label>
+    <button id="order" aria-label="Sort direction">▲ Ascending</button>
+    <button id="shortlist-only" aria-pressed="false">🎁 Shortlist (<span id="shortlist-count">0</span>)</button>
+  </div>
+  <section class="card" id="results"></section>
+</main>
+<script src="app.js"></script>
+<script src="browse.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>
