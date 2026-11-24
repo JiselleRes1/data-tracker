@@ -1,0 +1,20 @@
+{
+  "run_time": "2026-11-24T04:47:09Z",
+  "first_run_date": "2026-11-24",
+  "days_with_success": 1,
+  "items": 30,
+  "new_today": 0,
+  "gone_today": 0,
+  "sources": [
+    {
+      "name": "coingecko",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "coinpaprika",
+      "ok": true,
+      "count": 10
+    }
+  ]
+}
