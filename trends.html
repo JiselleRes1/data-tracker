@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trends · Data Tracker</title>
+<meta name="description" content="Findings computed in your browser from the full history file.">
+<meta name="theme-color" content="#124a30">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script>try{if(sessionStorage.getItem("jw.frost"))document.documentElement.classList.add("frosted")}catch(e){}</script>
+</head>
+<body>
+<main>
+  <h1 data-sleigh>Winter Forecast for the Coins</h1>
+  <p class="sub" id="asof">Loading…</p>
+  <section class="card" id="explorer" hidden>
+    <h2>📈 Every value over the days</h2>
+    <p class="muted">Pick a value and the items to draw. “Index” rescales each item to 100 on its first day so coins of very different sizes can share one chart.</p>
+    <div class="controls">
+      <label>Value<select id="metric">
+        <option value="price_usd">Price (USD)</option><option value="market_cap_usd">Market cap (USD)</option>
+        <option value="volume_24h_usd">24h volume (USD)</option><option value="change_24h_pct">24h change (%)</option><option value="rank">Rank</option></select></label>
+      <label class="check"><span>Scale</span><span><input type="checkbox" id="index" checked> Index to 100 on first day</span></label>
+      <button id="pick-top">Top 5 by market cap</button><button id="pick-all">All</button><button id="pick-none">None</button>
+    </div>
+    <div class="picker" id="picker"></div>
+    <div class="chart" id="explorer-chart"></div>
+  </section>
+  <div id="sections"></div>
+</main>
+<script src="app.js"></script>
+<script src="charts.js"></script>
+<script src="trends.js"></script>
+<script src="theme.js"></script>
+</body>
+</html>
