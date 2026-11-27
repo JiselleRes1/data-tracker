@@ -1,0 +1,15 @@
+{
+  "run_time": "2026-11-27T01:40:32Z",
+  "sources": [
+    {
+      "name": "coingecko",
+      "ok": true,
+      "count": 20
+    },
+    {
+      "name": "coinpaprika",
+      "ok": true,
+      "count": 10
+    }
+  ]
+}
